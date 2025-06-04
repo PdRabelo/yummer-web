@@ -48,15 +48,15 @@ O sistema é composto pelas seguintes entidades:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/sistema-reservas.git
-cd sistema-reservas
+git clone https://github.com/PdRabelo/yummer-web.git
+cd yummer-web
 ```
 
 2. Crie um ambiente virtual:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
+python -m venv env
+source env/bin/activate  # ou env\Scripts\activate no Windows
 ```
 
 3. Instale as dependências:
