@@ -1,0 +1,15 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}Reservas{% endblock %}
+
+{% block content %}
+    <h1>Reservas</h1>
+    <a href="{% url 'reserva-create' %}" class="btn btn-primary mb-3">Nova Reserva</a>
+    <ul class="list-group">
+        {% for reserva in reservas %}
+            <li class="list-group-item">
+                <a href="{% url 'reserva-detail' reserva.pk %}">{{ reserva }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

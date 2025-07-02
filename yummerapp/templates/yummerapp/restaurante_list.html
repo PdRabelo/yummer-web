@@ -1,0 +1,15 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}Restaurantes{% endblock %}
+
+{% block content %}
+    <h1>Restaurantes</h1>
+    <a href="{% url 'restaurante-create' %}" class="btn btn-primary mb-3">Novo Restaurante</a>
+    <ul class="list-group">
+        {% for restaurante in restaurantes %}
+            <li class="list-group-item">
+                <a href="{% url 'restaurante-detail' restaurante.pk %}">{{ restaurante.nome }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}{{ restaurante.nome }}{% endblock %}
+
+{% block content %}
+    <h1>{{ restaurante.nome }}</h1>
+    <p><strong>Endereço:</strong> {{ restaurante.endereco }}</p>
+    <p><strong>Telefone:</strong> {{ restaurante.telefone }}</p>
+    <a href="{% url 'restaurante-update' restaurante.pk %}" class="btn btn-warning">Editar</a>
+    <a href="{% url 'restaurante-delete' restaurante.pk %}" class="btn btn-danger">Deletar</a>
+    <a href="{% url 'restaurante-list' %}" class="btn btn-secondary">Voltar para a Lista</a>
+{% endblock %}
