@@ -1,0 +1,11 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}Mesa {{ mesa.numero }}{% endblock %}
+
+{% block content %}
+    <h1>Mesa {{ mesa.numero }} - {{ mesa.restaurante.nome }}</h1>
+    <p><strong>Capacidade:</strong> {{ mesa.capacidade }}</p>
+    <a href="{% url 'mesa-update' mesa.pk %}" class="btn btn-warning">Editar</a>
+    <a href="{% url 'mesa-delete' mesa.pk %}" class="btn btn-danger">Deletar</a>
+    <a href="{% url 'mesa-list' %}" class="btn btn-secondary">Voltar para a Lista</a>
+{% endblock %}

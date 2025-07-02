@@ -1,0 +1,15 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}Mesas{% endblock %}
+
+{% block content %}
+    <h1>Mesas</h1>
+    <a href="{% url 'mesa-create' %}" class="btn btn-primary mb-3">Nova Mesa</a>
+    <ul class="list-group">
+        {% for mesa in mesas %}
+            <li class="list-group-item">
+                <a href="{% url 'mesa-detail' mesa.pk %}">{{ mesa }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

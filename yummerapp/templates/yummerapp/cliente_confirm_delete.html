@@ -1,0 +1,13 @@
+{% extends 'yummerapp/base.html' %}
+
+{% block title %}Confirmar Deleção{% endblock %}
+
+{% block content %}
+    <h1>Confirmar Deleção</h1>
+    <p>Você tem certeza que quer deletar o cliente "{{ cliente.nome }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Deletar</button>
+        <a href="{% url 'cliente-list' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
